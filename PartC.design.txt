@@ -1,0 +1,441 @@
+Dalton Beauchesne,nqr159,11353160
+John Thoms,gvr812,11357558
+
+** IMPORTANT *****
+Go to cmpt332-amd64 to cross compile the three versions of s-chat
+
+
+chat program using RT threads IPC
+
+
+data structures and their rational:
+
+
+LIST trasmitterMessages:
+represents a backlog of chats the transmitter thread
+should send across the network
+only server and transmitter should have access to this
+list
+
+List printerBox:
+represents a backlog of chats that the printing thread
+has to print
+only printer and server should have access to this 
+list
+
+struct message {
+	char string[2048];
+	uint32_t id;
+	uint32_t seconds;
+	uint32_t microseconds;
+}
+a structure that defines the message being sent across
+the network,where seconds and microseconds is the time 
+that the keyboard input was received.Also contains an id so the
+server can verifiy which thread sent the message.
+Note that all data types are uint32_t so that the size
+of the struct can remain constant throughout all machines.
+As errors can be introduced if this is not the case
+
+
+Semaphores: the main purpose of this semaphores is to lock the 
+critical regions that are not in the server as some processes 
+share access to data with the server process 
+
+sendSem intially 1:
+Purpose is to place a lock on the transmitterMessages list
+should call P() before acessing it and V() after accessing it 
+
+
+emptySem intially 1:
+Purpose is to place a lock on the emptyMessages  list
+should call P() before acessing it and V() after accessing it 
+
+printerSem intially 1:
+Mutuex that is meant to lock printerBox list 
+
+
+
+###############################################################################
+Exit error codes and their meaning 
+UNRECOGNIZEDMSG = -1
+MALLOCFAILED = -2
+
+UNRECOGNIZEDMSG is an error that occurs when the server thread cannot
+recognize the sending threads id, as such this creates undefined behavior
+and will result in the program being crashed with exit value set to -1
+
+MALLOCFAILED is an error that if when calling getNewMessage function,
+the memoryAllocation fails, this creates undefined behavior, as 
+threads now have a pointer to who knows where, and as such we crash
+the program with exit number set to -2
+
+
+
+
+###############################################################################
+outline of IPC
+
+for this assignment we will be using send recieve reply model of ipc 
+every thread but the server thread will have different states. In particualar
+
+whether or not a thread is blocked upon send,recieve or reply completely 
+depends on the thread and some other conditions that have yet to be 
+fleshed out 
+
+to implement this we will use the send recieve and reply functions 
+specificed in the RTT pthreads documentation to get the 
+job done
+ 
+
+the server thread is a special kind of thread in that it's primary job is 
+to coordinate and synchronize the other 4 threads, it will never send messages
+to threads. However it may recieve and reply to threads which in turn
+controls other threads ability to execute. The server should always be running
+and should never block, with the exception that it needs acess to a critical
+region that other threads may be able to access.
+
+This means that other 4 threads should never send messages to each other
+directly, as doing so will not guarentee synchronization but rather send
+a message to the server who then can decide when to unblock them with a 
+reply message and also process the threads data in the meantime it is 
+blocked 
+
+###############################################################################
+socket programming
+to send and receive messages across the network we have 2 sockets
+sendSockFd which is the socket that contains the address info of the 
+other machine
+
+receiveSockFd which is the socket that contains our address info
+and is also binded to our port
+
+
+
+###############################################################################
+threads and their jobs:
+
+
+thread keyboard:
+Purpose is to read keyboard input from stdin
+since we cannot block upon reading from stdin we use fctl function
+to modify the stdin file options to disable blocking when 
+reading with no input. This will cause polling 
+which is inefficient, however there is not much else that can be 
+done here
+
+Intially the keyboard thread should request to read from stdin
+if there is no input then we just repeatly poll stdin until there is input.
+Once input is found the keyboard thread will send a message to the server
+that contains the message/input from stdin and the time it was recieved. It 
+will remain in a blocked state until the server replies to the thread.
+Once unblocked it then just repeats the process 
+
+
+thread server:
+purpose of this thread is to handle a majority of the
+critical region, with the exception of some lists 
+other threads need to operate correctly, as previously stated
+all threads should send messages to the server and the 
+server should only recieve and reply IT SHOULD NEVER SEND
+
+thread transmitter:
+Purpose of this thread is to sent udp diagrams across the network
+it will intially send a message to request some data to be 
+sent across the network. It will remain blocked until the server
+replies to it.
+At this point there should be an item in transmitter list 
+so it should call P() on sendSem and take the item off the list
+then call V() on sendSem  
+it should then unpack the message translate it to network byte order 
+by call to htonl()
+and send it across the network.
+if the bytes from sendTo return value are less than the bytes in 
+the message it will send again until everything is sent.
+After it is done it just repeat this process forever
+
+
+thread printer:
+Purpose of this thread is to print out lines to stdout
+it should begin by sending a message to sevrver.
+Once the server replies to the message the printer can 
+expect a message to be in its printerBox
+so it calls P() on printerSem removes a message from the 
+printerbox calls V() on printerSem, then prints the message
+and the time it was created  
+
+
+thread reciever:
+Purpose of this thread is recieve UDP diagarams from the other process and 
+send them to the printer.
+it should intially call recvfrom and at this point will should not 
+block, this feature will be turned off via fctrl
+until it receives a udp diagram once it awakes it should send a 
+message to the server. Once the server replies it should just repeat
+this indefinitely 
+
+
+
+###############################################################################
+Functions and their syntax
+
+void server():
+Purpose of this function is to carry out the actions of server
+thread  specfied in threads and their jobs section.
+
+void transmitter():
+Purpose of this function is to carry out the actions of transmitter
+thread specfied in threads and their jobs section
+
+void keyboardInput()
+Purpose of this function is to carry out actions of keyboard
+thread specified in threads and their jobs section
+
+
+void printer():
+Purpose of this function is to carry out actions of printer
+thread specified in threads and their jobs section
+
+void reciever():
+Purpose of this function is to carry out actions of reciever
+thread specified in threads and their jobs section
+
+getNewMessage()
+Purpose of this function is to get memory for a new message
+as since we pass messages via pointers it means that 
+we need to ensure pointer bugs dont happen where every
+item in a list has the same address
+Return a struct message pointer to some new memory address
+ 
+exit_program()
+Purpose of this function is to do somecleanup and then
+exit the program
+
+encode()
+Purpose of this function is to translate the message
+using htnol
+Parameters: a pointer to the struct message
+
+
+decode()
+Purpose of this function is to translate an incoming message
+from the other computer using ntohl
+Parameters: a pointer to a struct message
+
+###############################################################################
+Sending and Receiving across the network protocol 
+
+to send a message to another machine you need to know its hostname,
+to figure out a hostname in Linux machines you can use the command
+hostname to figure it out.
+
+
+sender and receiver threads will send the struct message across the network
+in order to communicate with different machines
+
+since the message struct contains an array and not a pointer it 
+should send all the characters in the array across the network when
+sending the message
+
+we send the entire size of the message across the network reguardless of the
+number of characters in the message. While it is inefficient to send
+that many bytes across the network that are not needed, there is not really
+any way around this, as there is no known archectecture indepenedent way
+of knowing how the bytes are organized in the struct, as that relies 
+on endianess of the archiecture. Which it is bad practice to make assumptions
+about endianess of archiecture.
+
+the max size of a message is 2048 characters, as messages will need to be fixed
+sized, this size is reasonably large enough to ensure that majority of 
+messages are contained within them, on the offchance that a message is 
+larger than 2048, it sends the first 2048 characters on one message and
+the rest onto another message
+
+The rational for the max size being 2048 characters, is that in order to get
+this thing to work on some archectures (mainly the trux machine) it needed
+to be a power of 2 and not big enough that a segfault occurs. I have 
+actually no idea why this works, I only know that if you change this
+it may not work on some architectures.  
+  
+
+###############################################################################
+Description of solution
+we will use semaphores and S/R/R ipc to ensure threads synchronize correctly.
+we use the server thread to handle most of the critical region 
+except for some shared lists, which can be handled with some semaphores
+Any process other than server can share data and synchronize by calling block
+as this gives the server control of when that thread should resume execution
+
+
+###############################################################################
+Pseudocode of solution/threads
+
+upon intialization
+step 1.get address info for both ports passed in
+step 2. create socksend socket that should contain our port 
+step 3. bind socksend to our process
+step 4. create sockrecv socket that contains the other port
+step 5. using fctrl turn off block on read for stdin be sure 
+to save the flags
+step 6. using fctrl turn of block on receive for sockrecv 
+be sure to save the flags
+step 7. create the lists and semaphores
+step 7. create the server thread
+step 8. create the rest of the threads
+
+
+
+
+Keyboard:
+intially turn stdin block off but save the flags so that when we exit
+the program we can turn this back on
+loop forever
+1.poll stdin for input 
+2.if no input go back to step 1
+3.if input then
+3.1 record the time input was recieve
+3.2 package data from 3.1 and input into a message
+3.3 send message to server
+once the server replies go back to step 1
+
+
+
+Transmitter
+loop forever
+1.request message from server
+2.Call P() on sendSem
+3.take message off the transmitterList
+4.Call V() on sendSem
+4.5 use htonl to translate to network byte order
+5.send message accross the network until the entire message has
+been sent
+6.go back to step 1
+
+
+
+Receiver:
+Intially it should turn off the sockets ability to block
+upon recieve using fctrl but be sure to save the flags so we 
+can turn this back on afterwards
+loop forever
+1.request data from network only read 8 byte header intially
+2. if no data go back to 1 
+3. if data then
+3.0.1 read the required bytes into a buffer
+3.1 tranlate to host order using ntohl()
+3.2 send the data to the server
+4.go back to step 1
+
+
+Printer:
+loop forever
+1.request data from server
+2.call P() on printerSem
+3.take item off printerBox
+4.Call V() on printeSem
+5.unpack message and print it to stdout
+6.go to step 1
+
+
+Server:
+loop forever
+1.recieve message
+2.check message type 
+2.1 if message is from keyboard
+2.1.1 call P() on printerSem and sendSem
+2.1.2 add message to printerbox and transmitterlist
+2.1.3 Call V() on printerSem and sendSem
+2.1.4 reply to printer and transmitter
+2.1.5 go back to step 1.
+3. if message is from transmitter
+3.1 if transmitterList is not empty then reply to transmitter
+3.2 otherwise recieve a new message and reply when 
+transmitterList is not empty 
+4.if message is from printer
+4.1 if the printerBox is not empty then reply to printer 
+4.2 otherwise recieve other messages and when the 
+printerbox is not empty reply to printer 
+5. if the message is from receiver 
+5.1 call P() on printerSem
+5.2 add message to printerBox 
+5.3 call V() on printerSem
+5.4 reply to receiver 
+5.5 reply to printer
+6. if the message is an exit message
+6.1 call exit_program
+
+
+
+
+
+
+
+###############################################################################
+Other stuff:
+Since we are working with threads and not process
+keyboard cannot block if it tries to read from stdin and their is no input
+Likewise
+reciever cannot block if it tries to recieve and their is no ouput
+as such we are forced to busy wait poll until we recieve our desired 
+input as any other method that I know will block the process and not just
+the single thread
+
+
+we do not convert chars from host byte order to network  byte order when
+sending the data across the network since, a char is only 1 byte so
+endianess does not matter. In other words reading starting from
+the top most byte or the lower most byte does not matter when you have 
+just 1 byte
+
+we have to allocate memory for the messages since they are stored 
+on a list and we do not want the list item pointer to store the 
+same address for all nodes. So the server thread are
+responsible for allocating memory while the  printer and sender threads
+are responsible for deallocating it once they are done with the message
+
+A known issue is that the machines tux and trux cannot send messages to 
+Drone machines but the Drone machines can send messages to tux and trux.
+We have actually no idea why. 
+
+messages are fixed size and if they get lost we do not make any attempt to 
+resend them or verifiy that they have been sent. The reason for this is 
+to keep the implementation simple and most of all, we did not have enough
+time to implement these things, and a working program that has some 
+limitations is better than a program that does not work and has no 
+limitations.
+
+
+time is sent and displayed in epoch format, as the purpose time
+is to let the other know when the message was sent, and 
+just sending in epoch format allows one to use relative comparsions
+to see which message was sent before the other one
+
+###############################################################################
+Things that have the rational of in order to get it to work we had 
+to do it:
+
+A Rule that will be will be used throughout this codebase is that all
+parameters of of an Rtt Api function must be used. We do not pass null in
+as a parameter nor do we pass in zero. We have supplied a global 
+throwAwayMsg variable and global size pointer if you do not need to use
+an Rtt Api parameter. While this may cause some more uneccesary work.
+This rule is here to stop subtle bugs from occuring when passing in incorrect
+parameters into the api functions, which we have experinced plentyful
+
+You may also see some uneccesary typecasting to void pointers throughout 
+this program. This was done in particular to make sure that all types lined
+up with the Rtt send function, as with some architectures RttSend would 
+crash if the parameters were either a different type and passed in or 
+were type casted upon passing in the parameters, the function would
+simply just not work on some computers and crash some other ones.
+
+As previously mentioned the size of messages are 2048, for whatever
+reason they had to be a power of 2 and smalller than 4096 to prevent
+trux from segfaulting when receiving a message. Again we have 
+no idea why this happens.
+
+
+
+
+
+

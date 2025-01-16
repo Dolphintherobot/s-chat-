@@ -1,0 +1,1585 @@
+John Thoms, gvr812 11357558
+Dalton Beauchesne, nqr159, 11353160
+
+commit 7ab57c5f48ed7099f9c2f83e3c4a993f5654be1a
+Author: John Thoms <gvr812@usask.ca>
+Date:   Mon Oct 28 17:16:40 2024 -0600
+
+    PartA.design done
+
+commit b75533685e30a333587b87e7dbff87002c00449e
+Author: John Thoms <gvr812@usask.ca>
+Date:   Mon Oct 28 17:08:40 2024 -0600
+
+    getting rid of unneeded files in xv6
+
+commit 1aad996933675c1ab719e2aa9e454e0028aceac0
+Merge: ae16c70 34a789c
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 28 17:03:34 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit ae16c7028916db1c5ca2038bd96dc26435e50de1
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 28 17:03:09 2024 -0600
+
+    Removed empty messages variable, since it was never used once.
+
+commit 34a789cda5b41a2a453ca6341416bfc9f2abbabb
+Author: John Thoms <gvr812@usask.ca>
+Date:   Mon Oct 28 17:02:47 2024 -0600
+
+    Added important note to design
+
+commit 32b47e975e8604e0ca60fec4916ee4b44a5fb209
+Merge: f6dde92 ac5eeb9
+Author: John Thoms <gvr812@usask.ca>
+Date:   Mon Oct 28 16:59:10 2024 -0600
+
+    Merge branch 'a2-design' of git.cs.usask.ca:cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit ac5eeb9d0b1b7b49c637980eab90fd0d9d3d50f8
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 28 16:53:48 2024 -0600
+
+    Updated design.
+
+commit 84eb1f6abee0bea25d0a9e037c7b4cd11c78380d
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 28 16:40:30 2024 -0600
+
+    Updated s-chat to be within word count.
+
+commit bd89d69d74a9ebe670baf367ec01d80a42b3fb80
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 28 16:22:57 2024 -0600
+
+    Updated.
+
+commit 7402330e63b500b76755ad7ee497f9fbf10e8ff7
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 28 16:10:35 2024 -0600
+
+    Updated testplan.
+
+commit f6dde9296f6fa63c27b3413d7fa3d2c18c521679
+Merge: e0891e7 a928c9f
+Author: John Thoms <gvr812@usask.ca>
+Date:   Mon Oct 28 09:05:05 2024 -0600
+
+    Merge branch 'a2-design' of git.cs.usask.ca:cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit e0891e75bf04e8ed20911710c99d7ea9f61f6325
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 20:04:26 2024 -0600
+
+    made xv6 diff file
+
+commit 04d3bd3c02882368dbdab42396ef3e3e06b2c7b0
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 20:00:48 2024 -0600
+
+    Finished part a
+
+commit a928c9f514c5b6c69b9e614e98598d9cae5d73f8
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 16:24:18 2024 -0600
+
+    Updated PartC documentation.
+
+commit 32f78eb69b15af85bd230f2c7170bc94dfb4eb3a
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 16:23:52 2024 -0600
+
+    Removed warning.
+
+commit 63b084d2078b7a52b144cb1efe98794966192bba
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 16:08:59 2024 -0600
+
+    Updated test results.
+
+commit caa1252ce692bffc55f116f8e085fabd437e8c90
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 16:05:28 2024 -0600
+
+    Updated prodcon, needed to make sure unheld emptyTex/fullTex never unlocked, should always have lock value of 1
+
+commit 328c377c68352e6d4e5f4f9bdc5acaec9518b37d
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 16:01:34 2024 -0600
+
+    Updated test results.
+
+commit e0293bcbe6b24c687497765baea25a25a746f49a
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 15:55:21 2024 -0600
+
+    Updated testresults.
+
+commit 2018d96dfc9b8f3779d05d3e1c62c9f3a7a0b2b0
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 15:51:17 2024 -0600
+
+    Removed additional send from receiver.
+
+commit b5f8341bbe1b64bda42696f79baa1da62f059e12
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 15:15:07 2024 -0600
+
+    Completed test 4.
+
+commit fcc51779b9268780efa4cf46fa39a4d60f3a9a1e
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 15:08:35 2024 -0600
+
+    Updated testresults
+
+commit 7baab45cdd5ac09007cb69a2cd8330e458ee443f
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 14:36:09 2024 -0600
+
+    Updated test plan.
+
+commit 2c6a858521bf13d7807b39e27e7a3529dddf0163
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 14:35:50 2024 -0600
+
+    Updated test results.
+
+commit bd6c877260973f138ebbedca7edc5b3a373fa718
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 14:02:05 2024 -0600
+
+    Changed fclose to close.
+
+commit d990675be152413bbc60bd293a1ee8d266b391df
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 13:58:15 2024 -0600
+
+    Added test statements.
+
+commit 58206d6416ce93464ebdbba48f37e99cccd2bc20
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 13:44:22 2024 -0600
+
+    Updated testplan
+
+commit 8486389dea2f3b8d88e995531eda6d324a5734cd
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 13:34:26 2024 -0600
+
+    Added exit codes.
+
+commit 8c97a226aeccf1952e37bb32e447846ee2d7ad6b
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 13:34:09 2024 -0600
+
+    Added exit codes section.
+
+commit bbbefe530ee89f69aac602175fc4005e0b37d276
+Merge: 294845b fd9f0c7
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 13:24:25 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit fd9f0c7ece7db5e338f018d7dbabf49358e64217
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 13:22:17 2024 -0600
+
+    Removed all warnings.
+
+commit e23d40bf4549606682c1cbf2d788a53c190fb7e3
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 13:12:15 2024 -0600
+
+    Removed more redundancies and fixed all warnings but one.
+
+commit a69e91d69e4d4d72f23dbbb8d60f2ff7c6916bdf
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 13:03:46 2024 -0600
+
+    Removed more redundant code, and also fixed issue with curly brackets.
+
+commit 7255376dddb23a6931794f7050c942a23bb1e330
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 12:57:19 2024 -0600
+
+    removed redunant code in s-chat.
+
+commit 294845bb9765639be48f0cc17220f218087762ca
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 12:43:15 2024 -0600
+
+    Updated testplan to include tests for paths of execution.
+
+commit 4b163f1363951f41e412f0f9f81df736112e409e
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 12:39:29 2024 -0600
+
+    Removing unneeded parts from s-chat
+
+commit e2a26b6ef2efb0d895de34551d230ef212a6e660
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 12:28:59 2024 -0600
+
+    PartB.design.txt
+
+commit eab37591a39f436f1a1346525df2eb31b3fe4be6
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 12:27:18 2024 -0600
+
+    Updated design.
+
+commit 8d14a04de039150d6877943549e46f109134349b
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 12:11:14 2024 -0600
+
+    continuing cleaning up s-chat
+
+commit 02a04dbd2a149fd95784c2868793db2e8360da74
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 11:42:30 2024 -0600
+
+    Trying polling instead of nomsg
+
+commit 1dd3dd620c8316505cf63194f4dbac7e07938282
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 27 11:19:23 2024 -0600
+
+    Updated design.
+
+commit 18a5580a4caaef3f1d7360e7de6f77aff11cd38d
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 11:15:12 2024 -0600
+
+    Made it so message struct is same size on all architectures
+
+commit a430d2273304c3b6ebb5852043436396b1d886cd
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 27 10:57:07 2024 -0600
+
+    Cleaning up s-chat file
+
+commit e9188106a3ee1b22ecd19984d7d15a55108af789
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 26 18:44:48 2024 -0600
+
+    Doesn
+    't work on tux or trux. idk
+
+commit 66177772e281a69dd2990d71f156105f5ecdf28e
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 26 17:04:58 2024 -0600
+
+    IT WORKS NOW THE STRUCTS WERE DIFFERENT SIZES IT WORKS NOW WE MOVED THE STRIng to THE BEGINNING OF THE STRUCT AND NOW IT FUCKING WORKS
+
+commit 8d188bb342f87b66308f37a3e2089f33682e3825
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 26 16:36:03 2024 -0600
+
+    s-chat works between architectures with same data sizes. ?????????????????????????
+
+commit 2a97da2528447b5a0d9302a5915ef2f5a53eae28
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 26 15:49:52 2024 -0600
+
+    Implemented ungarbled message.
+
+commit f939aba415ddf6100271b541799a8e22a513524b
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 26 15:39:57 2024 -0600
+
+    I don't know man
+
+commit 2a3cd6b8ea27636d510cc1b94220ce9ddc5cdb16
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 26 13:20:40 2024 -0600
+
+    Changed msg in printer function to be a pointer instead a struct.
+    Change was made to fix error with rttsend not working correctly and crashing the whole program because of it.
+
+commit fdae30806ac0de80370b2d069ea59c21024d9cf9
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 26 12:25:12 2024 -0600
+
+    Commiting to push.
+
+commit cba49b8e355fa58703fd7f16e9497aa1b6c57354
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 26 11:47:29 2024 -0600
+
+    Implemented exit_program function.
+
+commit dd36c888cb466a785aecf76876a74755b3e11cf5
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 26 11:27:07 2024 -0600
+
+    Added exit program stub.
+
+commit 764c9691d699eb78b641f4730580e5566da62e82
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 26 11:02:27 2024 -0600
+
+    Updated keyboard to signal server that no input was found rather than poll for input.Updated server logic to handle this request.
+    Change was made to prevent the application from being bottlenecked by the keyboard,since scheduling is non preemptive amongst the threads (other than the server) the other threads would be forced to wait for at least 1 input before being allowed to do their job.
+
+commit d2bdc7ae6f7a280cc89649cc4e541bc86e3073f3
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 25 18:48:43 2024 -0600
+
+    Code can now send messages across machines YES YES YES.
+
+commit fe38f9d27e5ff440b02ddc0eba275d50f6710248
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 25 18:45:58 2024 -0600
+
+    Changed how their address info was being set up to allow communciation between machines provided the hostname is given beforehand.
+
+commit 414b7b21eca8a6f98cc07ef82e292573b5f1d1f9
+Merge: 64f51fb 4e7bfb5
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 25 16:34:34 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit 64f51fb292d492f5a0db69a84175b3df6ee5e9ec
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 25 16:31:59 2024 -0600
+
+    Saving testfiles.
+
+commit 4e7bfb592ae88279f82700c3d62fcc3e7c6d63ce
+Author: John Thoms <gvr812@usask.ca>
+Date:   Fri Oct 25 16:31:41 2024 -0600
+
+    It works now
+
+commit 88d8e56e8bd03bacc62b00018a36b46d2f071390
+Author: John Thoms <gvr812@usask.ca>
+Date:   Fri Oct 25 15:35:20 2024 -0600
+
+    Testing yielding after every lock, doesn't work
+
+commit 43772e2e17ea7994a34ce86b29e28a5a1897821b
+Author: John Thoms <gvr812@usask.ca>
+Date:   Fri Oct 25 15:05:57 2024 -0600
+
+    prod_con works, but not correctly, think mutex use is wrong
+
+commit a528837b92857d6705bf10aca67e5b40f9ebf282
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 25 11:49:29 2024 -0600
+
+    can now send messages across the network YES YES YES.
+
+commit 767f877dfc89681633afdab81bee5427aab51be7
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 25 11:43:13 2024 -0600
+
+    Changed server priority to low
+    Change was made to enable other threads once replied to, to quickly complete their job and then reply to the server again, opposed to the server thread and receiver thread just starving out every other thread.
+
+commit afa42abc76815b69badff3ea7dec18980d9cbb22
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 25 11:16:30 2024 -0600
+
+    Updated receiver to use pointers instead of a variable, change was made to fix error where the receiver would sometimes send garbled messages.
+    Also added free fromMessage in NOMSG server condition to prevent memory leaks
+    ALso reciever now coordinates with other threads.
+
+commit 42d4c9be71edc003022c26469e1c6a83de955677
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 25 11:04:51 2024 -0600
+
+    Changed receiver logic to be able to report to the server if no message was received,Implemented server logic to handle it
+    Change was made to get the receiver thread to coordinate with the order threads instead of compieting with them to hog the cpu and starve out other threads.
+
+commit 6743ac293fb346933a621da0d31c7407cd2f248b
+Author: John Thoms <gvr812@usask.ca>
+Date:   Thu Oct 24 17:16:06 2024 -0600
+
+    overcomplicating mutex, don't need list
+
+commit 7d7e5caef1f84502326ecec2635456fb7b25a35b
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 24 15:55:43 2024 -0600
+
+    Turned blocking back on for recvsocket, since Rtt Api has a system call that blocks only the thread.
+
+commit 534fff070df0bc8731cb6d97e670dd513a6c84c7
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 24 14:15:30 2024 -0600
+
+    Change the priortiy variable in receiver thread to high to prevent it from starving itself.
+
+commit 1a56ea8f79bdd8b710ddaa89d8e4b5534500e8d8
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 24 14:12:35 2024 -0600
+
+    Updated receiver logic to modify its start time if a message is not found
+    Change was made to prevent receiver from starving other threads.
+
+commit 96de0ad584bdb23010736d909eb3536aea4d26e8
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 24 13:57:49 2024 -0600
+
+    Moved checking return value conditional branch outside of the while loop in receiver program,change was made to fix error where rv would always be -1 on the loop causing the receiver to crash.
+
+commit d06222fad16e81057a7b2f3ad491477084af797e
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 24 13:45:00 2024 -0600
+
+    Fixed compiler and linker issues.
+
+commit a6d37c062b92b6fcabdf78f7841c96c65d5b2126
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 24 13:43:27 2024 -0600
+
+    Changed all threads priority to norm and added logic in server and receiver thread to modify receiver priority, in hopes that the receiver and the other threads do get a fair turn with the cpu.
+
+commit 5dbb4e955d96893a077717f3fe3b1da93e7ee928
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 24 13:13:35 2024 -0600
+
+    Made server thread sleep after every iteration for 1 microsecond, the reason for this is to fix a scheduling error where the receiver and server threads can starve each other out if they are not told to give up the cpu.
+
+commit e76b0877c49f51739740ed074bba155c8daca3be
+Author: John Thoms <gvr812@usask.ca>
+Date:   Thu Oct 24 13:01:17 2024 -0600
+
+    Fixed previous issue. Did not need to make change to scheduler, just wasn't implementing producer consumer correctly
+
+commit 5d671ed827e6a649fd7a841d940c36854120dfbb
+Author: John Thoms <gvr812@usask.ca>
+Date:   Thu Oct 24 11:20:18 2024 -0600
+
+    Need to change mtx_unlock, should immediately switch to unlocked thread. Doesn't work otherwise
+
+commit 294c5681a3ccc519d6d2ab7bd1087e8af95c6a71
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 18:50:17 2024 -0600
+
+    Receiver thread as of right now just starves out all other threads or just gets starved out by other threads.
+
+commit cf51e9049069e86eea6687c56565e479a052151a
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 18:30:40 2024 -0600
+
+    Saving while it is behavin.
+
+commit 2dbfd8efdd9f1a47d14d249f32252e2820b7b5af
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 18:27:41 2024 -0600
+
+    Implemented receiver communcation with server, likewise the server can now communicate with the the receiver thread.
+
+commit b2ca4c4ff3bc173bd05202a0b6495940fdcdc663
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 18:20:24 2024 -0600
+
+    Printer Now works YES YES YES.
+
+commit c50c5a6e0f3286d0a57d6862f562ba9197a98170
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 18:19:57 2024 -0600
+
+    Changed order in which threads are created so that IPC can be facilitated correctly.
+    This is definitely one of the strangest bugs I have seen but the jist of it is that creation order can starve out mainp ... which is strange.
+    Also changed printerSleeping to transmItterSleeping in transmitter wakeup condition, to fix unintended erros.
+
+commit 58d46b7d067f6f89c2d387b17e9e15b3e40f52b0
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 17:22:33 2024 -0600
+
+    Changed conditional on line 226 to be an else if instead of an if
+    CHange was made to fix error where if the message being sent was not from the sender the program would crash.
+
+commit cecb5cb9b28fa720f8dcc13a1bbf813316571d01
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 17:16:31 2024 -0600
+
+    Added functionality to transmitter to be able to communcate with the server thread, likewise added functionality to server to communicate with transmitter.
+    didnt turn on the transmitter thread though oops.
+
+commit 8d8feedf35e0a73a49f87ee396eeeac4c7cd4f90
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 17:06:08 2024 -0600
+
+    Printer now works YES YES YES.
+
+commit 43d566a497b80155a53b0f08b6d4fcbc56bcd7ec
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 17:05:38 2024 -0600
+
+    Updated design.
+
+commit 8af3b070764ae07d9df5fb08ebd34710a186ba39
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 17:00:26 2024 -0600
+
+    Updated printer thread to communicate with the server and updated the server logic to be able to communicate with the printer thread.
+
+commit ca7f4f41e0e5bd1027f0a396f052336781f4c31b
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 16:49:15 2024 -0600
+
+    Changed the message pointer in keyboard_input to grab all data rather than the struct itself.
+    CHange was made to fix error where the intended data to be sent to the server was not recorded, even though it looked like it was being recorded.
+
+commit 738a399c61c761910ecbaefb61503905777e2a54
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 16:05:54 2024 -0600
+
+    Fixed warnings around Rttsend and reply, also added return value checks.
+
+commit 67acf37bf96505fb7e1bc65ae344fc78e56a75ba
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 15:58:55 2024 -0600
+
+    Implemented logic in the server so It can communicate with the keyboard thread.
+
+commit cc3fcf8577dcab339a928fdc13b1fbfd89cd8470
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 15:51:21 2024 -0600
+
+    implemented keyboard sending message to server logic.
+
+commit 4f7187f5f8a0663b4cfc984aa5b5a765b843d556
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 23 15:39:41 2024 -0600
+
+    Removed almost all instances of using the Rtt API to communicate with the server thread and vice versa.
+    This change was made since there is a bug in my code somewhere I have spent days trying to find and cannot find it, so as a last resort we can scrap it and try again
+
+commit bbe47ba1c9184f28cea34371b22c1de1add942d1
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 23 13:56:19 2024 -0600
+
+    Continuing prod_con, bit confused about how empty/full should work
+
+commit cbc41a75c68226448330c28df28522544c1b97d1
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 23 12:00:54 2024 -0600
+
+    Fixed bug with mutex array, thread array was overwriting mutex array, no bound checking on created threads
+
+commit 61bbf5d9785856e4a986bfae9eb82ad983f481a5
+Author: John Thoms <gvr812@usask.ca>
+Date:   Tue Oct 22 13:32:14 2024 -0600
+
+    Split up uthread file, build rule for prod_cond in makefile
+
+commit 2c58b96b2f24b66719e512b732b95e33ff027a25
+Author: John Thoms <gvr812@usask.ca>
+Date:   Tue Oct 22 12:03:13 2024 -0600
+
+    Modifying makefile, trying to turn uthreads into library
+
+commit f680cecb26f65e335a2cdef87842c7175118fe64
+Merge: 34b3433 afb975e
+Author: John Thoms <gvr812@usask.ca>
+Date:   Tue Oct 22 10:35:02 2024 -0600
+
+    Merge branch 'a2-design' of git.cs.usask.ca:cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit 34b3433de09c144032b536948f23dcbd19a77a03
+Author: John Thoms <gvr812@usask.ca>
+Date:   Tue Oct 22 08:57:31 2024 -0600
+
+    Split provided test for uthread into separate file
+
+commit 7cb7a14b3e835831c4cbd811dd8bae50bc866e84
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 22 07:59:18 2024 -0600
+
+    Moved server thread to be created first.
+
+commit afb975ee2bcbaa348e9639d655cb27df5c874d60
+Merge: 9471bbe ca05e8f
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 21 16:57:46 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit 9471bbe7048ccd87f2868f8e0312418be581c9b2
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 21 16:57:09 2024 -0600
+
+    Added a throwAwayMsg variable to prevent null being passed into RttReply function calls.
+
+commit ae5805e5d1aec485ff28f3b1255599a00a8b6d6e
+Author: John Thoms <gvr812@usask.ca>
+Date:   Mon Oct 21 14:21:14 2024 -0600
+
+    Updated mutex, didn't allow multiple sleepers on single mutex before
+
+commit 6799c0536bc2ab1266c45b5f3f1a40d044889826
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 21 11:31:54 2024 -0600
+
+    Updated command on line 353 to typecase address of message to a void pointer, hopefully this fixes a bug where Rttreply just does not work.
+
+commit 065c953f927a34b22ce2295b928fa9f72e3f2bfe
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 21 11:05:33 2024 -0600
+
+    Fixed RttSend parameters in transmitter, Hopefully this solves an issue.
+
+commit f3743b5ddfed7e9c552ea6fb497a153f24f0286a
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 21 09:30:05 2024 -0600
+
+    turned off printer thread for right now.
+
+commit 0db8b52ec9a56e1d342cd207c9e7c4dae8807b9b
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 20 16:03:36 2024 -0600
+
+    Changed malloc to calloc in getNewMessage.
+    Change was made to made memory behavior more predictable, as calloc sets to zero.
+
+commit 73da5f387e13e2988f7d8212c9fb9a6226afe9b3
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 20 15:36:35 2024 -0600
+
+    Roughed out producer consumer test file
+
+commit 46db6a96fd2d991c6228126c500b19200da7818b
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 20 15:25:18 2024 -0600
+
+    I got reply and send to work between server,printer,transmitter and keyboard_input threads, I would not reccomend reverting past this point, as subtle parameter bufgs occur.
+
+commit fe9afcc0096b12e2827b9c046d15f473d3fc1879
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 20 15:12:48 2024 -0600
+
+    Rough implementation of mutex functions
+
+commit 001de0acdaa8ffecc2d736f01e8ef14d3d2b6626
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 20 14:53:48 2024 -0600
+
+    Changed parmaters in line 461 or return value to NULL and 0,since no return balue is expected.
+    Change was amde to prevent segfault from occuring where the reply message would try coping null into the return message which causes a segfault.
+
+commit 6a3826f3889ed44b90f8e739f1d8de91aaaca4bb
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 20 14:10:12 2024 -0600
+
+    Wrote stubs for mutex functions
+
+commit 3af00e4cbdb3b3dc00d93a0bf216d9041010b547
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 20 14:02:21 2024 -0600
+
+    Added to design doc, how thread switching works
+
+commit c7e75fb314b08e49bb7cefede45109997948f852
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 20 13:59:52 2024 -0600
+
+    Got thread switch to work properly
+
+commit d0d27f3ff88c204b7d91bc1af2ef1db6ac7fea3e
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 20 13:47:39 2024 -0600
+
+    Uncommented transmitter thread creation.
+
+commit a6a0efdf9d595b13360423405eb0ccd56f5e73d0
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 20 13:42:26 2024 -0600
+
+    Updated line 207 of RttReply to take in a void point and not a struct message pointer typecasted as a void pointer.This change was made to fix an error with RttReply where it just does not work if the proper data types are not passed in. I dont know why this happens or why no errors are raised because of it, but neverless it still happens, if you find that any of the Rtt Api does not work try changing the data types to conform with the api without type casting.
+
+commit ca05e8ff219240df48880d3542ccc8a70633376b
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 16:28:45 2024 -0600
+
+    Moved registers to top of thread struct so can be indexed
+
+commit 67de4a3e3bbcff2228618e0d715ebb1f583f433f
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 16:25:52 2024 -0600
+
+    Updated design doc, started work on thread switch.
+
+commit 4285694e6e5da101fd0be03b75bf76d33325ad20
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 16:04:22 2024 -0600
+
+    Allocated space for thread stack, free it when thread exits
+
+commit 6634aa231326a98b172056f1425bf4121d85b9fe
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 15:57:15 2024 -0600
+
+    Modified thread struct to hold registers
+
+commit e0c6819807cafc9ddf284d5cfac435cac6c83891
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 15:27:32 2024 -0600
+
+    Got ride of most compiler warnings.
+
+commit 01f77b77bdc4f5c868e2743fe2d44351278851fc
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 15:06:37 2024 -0600
+
+    Started on PartA design, getting an idea of how uthread works
+
+commit aa33cf2700b5de630c6c94eeaf799cf57d78cccd
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 14:58:52 2024 -0600
+
+    Fixed syntax error.
+
+commit e5c2b4e9aacf8b505c7da7f9c4e18bf242f5bb98
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 14:58:23 2024 -0600
+
+    Added from variable in server procedure to malloc an address.
+    Change was made to hopefully fix the server being unable to recevie messages.
+
+commit 9a42d50380bf2cf0432030876b16b536fafb8694
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 14:55:04 2024 -0600
+
+    Removed serverpid varialbe and replaced it with serverId.
+    CHange was made to fix bugs where threads would send a message to serverId but the server had an id of serverpid.
+
+commit 428154a6df269e964867ea1532c048ae0930084d
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 14:47:22 2024 -0600
+
+    Added return value checks on RttReceive calls.
+    Always check your return values.
+
+commit 126831ef61ebcb9b0ec0944d743dbe8d9766d4d6
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 14:43:41 2024 -0600
+
+    Fixed bug in makefile, compiles uthread properly now
+
+commit 87534210866249dbb83b57ea8c5638985fb29ffb
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 14:31:33 2024 -0600
+
+    Updated makefile to compile uthread
+
+commit a188d5fdc2bac790aa4d87fcbbce3e3e90e3b1ed
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 14:31:20 2024 -0600
+
+    Changed all size variables from int to unsigned int.CHange was made to fix bug with sending message.
+
+commit 6dd359400b80fadfedb958e6296badc870f8bf27
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 14:21:03 2024 -0600
+
+    Added starter files to xv6/user for part A
+
+commit 0a72a45aec81ced9dd0e01b337c1204dfb68cc3e
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 14:01:58 2024 -0600
+
+    Fixed error on line 157 where recpid was transpid.
+
+commit 5cfea1e2b1c1eb38e6916af7949b40d2e7bdf680
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 14:01:16 2024 -0600
+
+    More updates to makefile, only cross compiles s-chat if on cmpt332-amd64
+
+commit c4bb3362fa408ac632a0f73041c24869da24d0e6
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:51:53 2024 -0600
+
+    Fixed compiler errors.
+
+commit 08f714f8c7ddb5e67dce077bdc03cd94d9e3bc7a
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:47:20 2024 -0600
+
+    Updated design.
+
+commit 6c4928fe57a98f99c7cfa903362edf8ef2819f1d
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:46:47 2024 -0600
+
+    Changed implementation so now the server thread will be responsible for allocating memory for the new messages instead of input and receiver threads.
+    Change was made to accomodate to the RttReceive api, which requires a buffer be passed in and not just a pointer.
+
+commit a7638b91b775d1d32cdd4849ec016332a253cba3
+Merge: 214eebb 1560dae
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:30:26 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit 1560dae69de339f0a87677467ffddfecdbc4fee7
+Merge: 296c168 663e815
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 13:29:54 2024 -0600
+
+    Merge branch 'a2-design' of git.cs.usask.ca:cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit 214eebb90803a114c8287906524deb4e1dbe86ba
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:29:49 2024 -0600
+
+    Updated design doc.
+
+commit 169b77bf768f77e80f5ce366a269eacb0592a71b
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:28:51 2024 -0600
+
+    Implemente keyboard thread and fixed error on line 316 where m was referencing the wrong struct message,causing the compiler warning to pop up.
+    Also added statements after free call setting pointers to null to prevent accidental memory usuage.
+
+commit 296c168f5f858107a6b48e0c2e0cd7717862b14c
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 13:28:48 2024 -0600
+
+    All binaries are compiled at once instead of depending on system
+
+commit 632f76da81a82ace2e8b4b08af948e3e933f1b69
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:24:22 2024 -0600
+
+    Implemented keyboard thread.
+
+commit 663e8157c8e65417f9b687c6992c8985c5c7a477
+Merge: 81f512c e7a8b8a
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:10:57 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit 81f512c69c92278e5df34de8d1def7aad2b9e107
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:10:45 2024 -0600
+
+    Fixed compiler errors.
+
+commit 2eba44c9607bc8932d66246d8592629333fbeb8c
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 13:08:09 2024 -0600
+
+    Implemented getNewMessage and made printer and sender responsible for free allocated memory,Made input and receiver threads responsible for allocating memory.
+    Change was made so the system can actually have a list of messages instead of what was currently implemented which was a list that contained the same message memory address across all nodes.
+
+commit 7aa1d5765c19c1ca48fa1639187af5a4be996dcd
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 12:35:13 2024 -0600
+
+    Implemented keyboard and printer logic for server.
+
+commit e7a8b8aa9962fded1b228ba1247cb21eb439c35a
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 12:34:53 2024 -0600
+
+    Implemented conditional compilation for s-chat, haven't tested
+
+commit 2efa14301b9400592d2c1805bf6e1822fe887d91
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 19 12:20:05 2024 -0600
+
+    Updating makefile to compile s-chat on different architectures:
+
+commit e7eb4f9ccf73cf3782acf1d694bd538e18b94418
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 11:57:33 2024 -0600
+
+    Updated design.
+
+commit f202a54f8e8c45806752a410a95c073de0b84f02
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 11:54:15 2024 -0600
+
+    Updated server,transmitter and receiver thread to reflect the change of using id codes to identify the sender.
+    Also fixed any syntax errors or compiler warnings.
+
+commit 10b1ce53c2a8ecb072d9af093861d36ee4f3c212
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sat Oct 19 11:50:27 2024 -0600
+
+    Added message id's so the server can figure out who sent the message,Updated decode and encode functions to reflect this change.
+
+commit b2fc1c9ea5e7e05e8f885fea685f5dc577820ede
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 18 17:28:06 2024 -0600
+
+    Implemented server logic for receiver and transmitter threads. Does not build right now do to RttThreadId not being comparable.
+
+commit 331314ccea7bb9678e14d54cccfe3232b5674d9a
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 18 17:03:55 2024 -0600
+
+    Turned all threads id varaibles into
+    global varaibles.
+    Change was made to help the server know which thread it gets a message from.
+
+commit 8bec2f9206b9e15e3c5e592a9fd03041c3f35039
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 18 16:53:53 2024 -0600
+
+    Changed encode and decode to no longer convert char's endianess,furthermore changed message string type back to char.
+    Changes were made since a char is only 1 byte endianess does not matter
+
+commit 02f086d478b9776a2ce781aa96b3ca1e9e6a1a0e
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 18 16:50:48 2024 -0600
+
+    Updated design to make message a char once again.
+
+commit bd414592e7d974514c0c4e7f5fd0a85e2ae92597
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 18 16:44:04 2024 -0600
+
+    Fixed compiler errors.
+
+commit 43a4f1e98a1c24a2a704f8e58d744667303b75e6
+Merge: 2431cbf b343f81
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 18 16:32:49 2024 -0600
+
+    Fixed merge conflicts.
+
+commit 2431cbfeb8a57d9e21c5c73455ed438b280c4828
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 17 18:43:25 2024 -0600
+
+    Updated sender and receiver to coordinate with the server and loop forever.
+
+commit b343f81683ed6383305cfa921d2208b33d8490b7
+Author: John Thoms <gvr812@usask.ca>
+Date:   Thu Oct 17 18:36:03 2024 -0600
+
+    Staring functionality for keyboard thread
+
+commit 66bd884c2852351845141032b330d610154ae6e3
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 17 18:14:42 2024 -0600
+
+    Changed string back to be of type short int, this change is made to fix an error in reguards to truncation and byte order conversion.
+
+commit b7b0c93a8d7c2565fe89bf6ac177485d27ee98b7
+Author: John Thoms <gvr812@usask.ca>
+Date:   Thu Oct 17 18:11:33 2024 -0600
+
+    Wrote function for printer thread, haven't implemented semaphore functionality
+
+commit 1927a4c89ed51d9de1014a2a7fb8e68c7a1b8d90
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 17 18:07:44 2024 -0600
+
+    Changed string type to short int to fix error reguarding changing the endianess of a char casted as a short int, then casting it  back to a char.
+    The error that ensues is that it discards all the bytes that were in the char and keeps all the bytes that were zero causing every character in the message to be the null terminator
+    Also changed types in encode and decode to be unint32_t and uint16_t as that is what the byte order conversion functions are supposed to take in, not sure what those old ones are.
+
+commit 5411f3134a55e2fdc27a7ae09bd6e92488533db2
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 17 17:59:28 2024 -0600
+
+    Can send messages succesfully.
+
+commit 6c255a92bb1efa71b31ef4976cdd6db26d4608c2
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 17 17:25:51 2024 -0600
+
+    Updated design document.
+
+commit 89969668a1828d855ae20a9e3a4ff4a892a5e3c3
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 17 17:24:20 2024 -0600
+
+    Changed string type to char instead of short int, change was made because we are 99% certain we wont run into truncation errors.
+
+commit 42266c60fc0987154ee09e6f924e31dccf690eae
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 17 17:09:25 2024 -0600
+
+    Fixed compiler errors.
+
+commit 99190f18d80322157d36f9300d156bc5c6b06965
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 17 17:07:46 2024 -0600
+
+    Modified program to test sender and receiver.
+
+commit 09da77d5be15282213316a55f38391fc0db4c42b
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 17 16:26:21 2024 -0600
+
+    COmmit before changing branches.
+
+commit 149426e3eb36f058b52dcde45c3316a66eda1e4c
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 16 17:58:47 2024 -0600
+
+    addrlen variable in recieve should now hold size of the their_addr variable.
+
+commit 12f7bcb2474a465c6a4f9ac2dd5cc375afdf1103
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 16 17:50:44 2024 -0600
+
+    Undid changes of previous commit.
+
+commit a69b5dc80f478dacf08cb6ee01604b05c144b19e
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 16 17:40:32 2024 -0600
+
+    Fixed paramters in recvfrom, in particular the last 2 being the wrong type.
+
+commit a9d9bff3a653b7ec2dc75d2a393bcd72a723c3a5
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 16 17:35:29 2024 -0600
+
+    Undid change of previous commit.
+
+commit d6bc407a4a97fd0b6e56151d3bd79b9f23cf94ad
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 16 17:34:16 2024 -0600
+
+    Changed type of time in message to unsigned long. Change was made to make data easier to send across the network.
+
+commit 8ae5dbafc74d19ecdda193124d6cf3e02fb9b854
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 16 17:27:25 2024 -0600
+
+    Implemented decode function.
+
+commit e633bf9215de596bb320f97dd396cca1b95e0f6c
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 16 17:06:01 2024 -0600
+
+    Implemented decode function.
+
+commit afc7eadbec8429d94b605c89ddba2e7e5f41155d
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 16 17:02:36 2024 -0600
+
+    Updated design.
+
+commit 306189937a8b1049fa09101e328ed57c7788ff8a
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 16 17:00:44 2024 -0600
+
+    message now has an array of short ints. This change was made to prevent antcipated bugs with endianess and network byte conversion, in particular it is unknown what the number of the value after the conversion would be if you type cast it as a char, as truncating the value after a byte swap could discard the entire value.
+
+commit 6a51eff548df1b46452ad7e5f4318467a39df4f6
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 15 18:33:21 2024 -0600
+
+    Copied get_current_time from Assignment 1 part 3.
+
+commit 42565880d20304d4afa5afd46ac3f0995ec96edc
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 15 18:25:17 2024 -0600
+
+    Changed names of struct message to align with doucmentation or implementation.
+
+commit 7bf54cff805e1d16450311de646a628de60b83ef
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 15 18:23:31 2024 -0600
+
+    Updated sending messages across the network section of the documentation, and algorithims and data structures in relation to it.
+
+commit 2d54cdbb17160d39ec6baf54fa53809627f15dba
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 15 18:11:47 2024 -0600
+
+    Included sys/time.h as we need the struct timeval to compute time of day.
+
+commit 746b183e842597850e31c4a333db60ea8f5e440b
+Merge: 5288980 8d448c7
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 15 18:04:45 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit 5288980bc9f19e4c96a646433286c1c196362216
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 15 18:02:25 2024 -0600
+
+    Updated to do list.
+
+commit 8d448c75936e3d1d50dde0fcfb21b2010b940d71
+Author: John Thoms <gvr812@usask.ca>
+Date:   Tue Oct 15 17:18:19 2024 -0600
+
+    CAN SEND MESSAGES NOW YES YES YES YES
+
+commit f37248b10edcf7ddc49465492bd73d99e5ef81e8
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 14 15:35:59 2024 -0600
+
+    Updated design.
+
+commit 0ca2d58b022cd7454d34de03e2274ec36f4b764e
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 13 15:34:17 2024 -0600
+
+    Added sending and recieving across the network
+    protocall section.
+
+commit c1afdb2148cdeae5ad9ebd034d3aa20ebed7eeb3
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 11 19:03:08 2024 -0600
+
+    Fixed syntax errors.
+
+commit 04c2f7ba27a6929ed1a33cffdbcb0a5b7825c583
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 11 19:02:32 2024 -0600
+
+    added message sending section.
+
+commit 07e0eee0c8e7b0309df3f0ee72dcf14d692c9a12
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 11 18:06:29 2024 -0600
+
+    Fixed a bunch of syntax errors.
+
+commit 0c90737ec6267d5117d9bb755c9ec68dad0c4032
+Author: John Thoms <gvr812@usask.ca>
+Date:   Fri Oct 11 17:07:31 2024 -0600
+
+    started implementing receiver
+
+commit 4ccb9617c0356624f285735111dc721d588565a5
+Author: John Thoms <gvr812@usask.ca>
+Date:   Fri Oct 11 16:43:02 2024 -0600
+
+    Added intialize call to r/w/m, changed sleep timer in r/w, Finished monitor implemntation. Seems to work
+
+commit b35a1aeeef93212160e99e11acb8e3f7df10101b
+Author: John Thoms <gvr812@usask.ca>
+Date:   Fri Oct 11 15:49:48 2024 -0600
+
+    Implemented monenter and monsignal
+
+commit d05539f85e195feed4d632397c5d1a377af7409f
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 18:53:02 2024 -0600
+
+    Updated to do list.
+
+commit c7da6c2f6405671e1f713b7ff0d3e9c0161a6947
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 18:52:49 2024 -0600
+
+    Implemented transmitter and translator functions.
+
+commit 7ec4f122ff5407fda6e6323378af3da73551d9a8
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 18:16:29 2024 -0600
+
+    s-chat now successfuly links with liblist.a
+
+commit 64b427c9f6875e4fbfe52e3ac8c1096a6c4212af
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 18:14:32 2024 -0600
+
+    Updated mainp to setup data structures and semaphores.
+
+commit 29b1075218009dcd153a02783f06a62f8b11b5a4
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 18:06:20 2024 -0600
+
+    Updated stdin and recieve socket to not block on read.
+
+commit 94cf46f8165e8edcbb56bd8c6754b93abf929b32
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:59:31 2024 -0600
+
+    Included fctrl.
+
+commit 1c3d42790230520151a298cc7395515687be8d42
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:57:22 2024 -0600
+
+    Fixed errors in reguards to temp variable being declared locally and globally
+    .
+
+commit 5b2bac0bb92e678a306b86356bfd65d102960fa2
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:48:12 2024 -0600
+
+    Updated mainp to request 3 arguments port1 machine and port2 then create 2 sockets and bind one of them to this process.
+
+commit 1f401764a66e4c138916809fb287462002b663e6
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:30:18 2024 -0600
+
+    Added a lot of includes.
+
+commit b985d8f340aa950bcf742be67e4d91c9ecd3aec0
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:26:45 2024 -0600
+
+    Upload New File
+
+commit bab960610aa2f139311ee5bbbf946b832a4e2925
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:26:16 2024 -0600
+
+    Upload New File
+
+commit aac16a20a4d74196c54c2f01c1cc780c32b30b12
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:25:37 2024 -0600
+
+    uploading test file
+
+commit 1ba869b77e2d6d1ed5937352b6eeb495ec617856
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:21:09 2024 -0600
+
+    Commiting so directory gets pushed.
+
+commit a3d871920f53ac818ea4a6e70f3a824d6d0cc6fe
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:15:02 2024 -0600
+
+    Fixed compiler warnings for MonWait
+
+commit 188b3b19b21085dfb9bbd3ce480fc33e25d66a2f
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:14:29 2024 -0600
+
+    Implemented Monwait.
+
+commit c328a8dc3acd3408b930042fd64640a17b09ba3f
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:04:05 2024 -0600
+
+    Implemented MonLeave.
+
+commit 3f2210d09a0f58ab02713f6aedc2b08ec997d946
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 17:00:45 2024 -0600
+
+    Updated makefile to link reader_writer with list library as the monitor library needs the list library.
+
+commit 7aba96d6b2d750b3d15394a32e3756a67e7af1db
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 16:48:50 2024 -0600
+
+    implemented Moninit.
+
+commit 8da05114ae7d957ea76cbe03fe3142e114fed312
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 16:37:47 2024 -0600
+
+    Changed NODEMEM define to be a 1000, we will need a good chunk of memory for monitor testing, later on we can set this back.
+
+commit 6070d162423417a2888f15498ae9139d040d9df0
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 10 16:32:22 2024 -0600
+
+    Updated to-do list.
+
+commit 030ea5eebcbc24f6cc18c04664bbc4ddad3f284f
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 9 20:26:43 2024 -0600
+
+    Adding tar to repo
+
+commit a20f96d438b71e9a6617550c16193ec316e9e1b8
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 9 20:20:24 2024 -0600
+
+    Making sure all files in repo
+
+commit c153387e8af7c297eebf1fa028f4b463c189e5a9
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 9 17:49:16 2024 -0600
+
+    Finished stubs for Monitor
+
+commit f95abb1d2be6096c1eb342208d75d8fec4b823ef
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 9 17:34:40 2024 -0600
+
+    Updated given files. Incorrect given types for reader and writer
+
+commit 13712612f350d1dbd52fce0852f34cf34c0680ab
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 9 17:27:54 2024 -0600
+
+    Updated part B design, slight change in how CV lists work
+
+commit 17f26dc2f6a759554719b4af43f92450966e3a21
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 9 16:15:00 2024 -0600
+
+    Slight change to Monitor.c, reflecting change in how CV lists will work
+
+commit ffaeb46b7897da3aba6422e568a0fb8e96f37765
+Merge: 518deaa 3892135
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 9 16:11:35 2024 -0600
+
+    merging changes made to s-chat.c
+
+commit 518deaa240fccce1fe1780f9ac5dadd47e78346c
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 9 16:08:32 2024 -0600
+
+    slight alterations to design doc. Very slight
+
+commit f5d2499dca800ef0d051409eaba61d322788b4e5
+Author: John Thoms <gvr812@usask.ca>
+Date:   Wed Oct 9 16:07:19 2024 -0600
+
+    Implementing skeleton functions for s-chat.c
+
+commit 3892135c4a51fd42ec9b529e5abf7b08bfc22921
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 9 15:55:00 2024 -0600
+
+    declared global data structures and semaphores that will be needed for s-chat.
+
+commit 11b4cdce7894a488d083ca3f5942b597c20b6ade
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 9 15:48:44 2024 -0600
+
+    Includede rtthreads.h
+
+commit f2b0021041b103904499db9ba46aa561607dd6e6
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 9 15:44:58 2024 -0600
+
+    Addeed skeletons for Server and printer thread.
+
+commit 973442403a0abaf10a8202ea0955ed96b71f9014
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Wed Oct 9 09:27:17 2024 -0600
+
+    Updated design.
+
+commit 90388aba65b2af8f607da82628123d5049f12950
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 8 19:24:16 2024 -0600
+
+    Updated todo list.
+
+commit 492493d1990bdafc912e3e8b7c4e95919d9b5fcd
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 8 19:16:33 2024 -0600
+
+    Updated design.
+
+commit 9f45ba5e947cb5aa766118221eeaf50e3620d0db
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Tue Oct 8 18:31:36 2024 -0600
+
+    Updated design.
+
+commit 3acdaf7ca4092d88ddddf39308861d584315eb42
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Mon Oct 7 11:15:56 2024 -0600
+
+    Updated design doc.
+
+commit 3938b7196fef61bada268fc3dc50711eeb2d9357
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 6 17:50:02 2024 -0600
+
+    Added processWait struct to header
+
+commit feaa8f139a7468812a0e95d8065f1a3d490f38bf
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 6 17:32:04 2024 -0600
+
+    Updated Makefile to compile s-chat.c
+
+commit b5c251cac3e7fe8ffbd3aac59f71903f179734b1
+Merge: df828f5 4bc4336
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 6 17:03:07 2024 -0600
+
+    Merge branch 'a2-design' of git.cs.usask.ca:cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit df828f575ef50ab1d34a3785a6bb167697adaf88
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 6 17:02:12 2024 -0600
+
+    Makefile compiles reader-writer-test
+
+commit 4bc4336552515012b8731166f036239103583776
+Merge: 7379e9d 355942f
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 6 16:12:30 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit 7379e9d82e4edd04405e2e97486fba874f58c9f1
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 6 16:11:41 2024 -0600
+
+    Updated design.
+
+commit 492c896350953479c8781199855caffce7364f6f
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Sun Oct 6 16:11:25 2024 -0600
+
+    Updated to do list.
+
+commit a0c739724a259d55e5407c0263f8605a4b51469d
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 6 14:50:02 2024 -0600
+
+    Started updating Makefile, added targets for reader/writer files
+
+commit 355942f4e5109a570ec3c4d80fc5a518ab854dcf
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 6 13:58:15 2024 -0600
+
+    wrote reader-writer-monitor.h using functions fomr reader-writer.c & reader-writer-monitor.c
+
+commit 07662dab5e75520957563df23866e051b24fb8ff
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 6 13:44:54 2024 -0600
+
+    Wrote wrong skeleton function, whoops. MonEnter instead of MonWait. Updated header to reflect added funcs
+
+commit de5bd4c646cb963088961ea46d8b3b62f7dae42a
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sun Oct 6 13:38:16 2024 -0600
+
+    Started writing skeleton functions for MonWait and MonSignal. Only checks to see if condition variables are positive, no functionality
+
+commit 2428da93a93318f355e3b6ec7533a9cb4101f250
+Author: John Thoms <gvr812@usask.ca>
+Date:   Sat Oct 5 18:27:37 2024 -0600
+
+    Starting on makefile updates, making rules for libMonitor library
+
+commit 712f2b5cc51b669ad0a4a2b35e843eb7d54bbe15
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 17:04:32 2024 -0600
+
+    Updated to do list.
+
+commit dae05af1d4455f8db102bf77ede241bd0f94a055
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 17:03:25 2024 -0600
+
+    Added neccesary includes and function prototypes.
+
+commit 99ed21a6bcc34d63662c4b95f10f19222d586fc4
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 17:02:40 2024 -0600
+
+    Updated file to include header.
+
+commit da9ae0b7b5ed908b2cd4a2518e8e735d63a56fff
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 16:57:39 2024 -0600
+
+    Intial commit.
+
+commit 93e12b916d87bc36ac3e5e5339b3b180dc50d1b7
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 16:57:05 2024 -0600
+
+    added skeletons for Monwait and MonLeave.
+
+commit 076fd2ce668781a81dd41ff858c6189a4d59b72a
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 16:53:40 2024 -0600
+
+    Copying xv6 from a1.
+
+commit 46bf824cf362bc14583a0328dc82369c8126f71e
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 16:50:44 2024 -0600
+
+    Copying list api from a1.
+
+commit fb76bbfd7960b5b84b1bee2be73f74e6555402c9
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 16:49:16 2024 -0600
+
+    Updated design
+
+commit 1a7d3b9b577f8397c34266fc60ee313f7b12aaa5
+Merge: 53d70b4 ec869c0
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 09:14:55 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit ec869c036b60b50e7f3945b464c6076b02a0b895
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 09:14:30 2024 -0600
+
+    Upload New File
+
+commit 53d70b427af8be1aa478ae4a19ed47a73d98dc2b
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 09:11:35 2024 -0600
+
+    Updated to do.
+
+commit b4f8e21d6a3ef11fe3120e94af102a340fbd8609
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 09:11:04 2024 -0600
+
+    Upload New File
+
+commit 9cd56ce7c5239d4936fdea813b1c0cf3ba0ff608
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Fri Oct 4 09:10:08 2024 -0600
+
+    Inital commit.
+
+commit cfd19838a0a5aa4e765a8e60d79d6c2656230111
+Merge: 74b70d1 0d3cae6
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 3 19:25:26 2024 -0600
+
+    Merge branch 'a2-design' of https://git.cs.usask.ca/cmpt332-fall2024/cmpt332-2024-group54 into a2-design
+
+commit 74b70d18724defeb3c9bfcd329364bfeb17d10f9
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 3 19:24:52 2024 -0600
+
+    Updated to do list.
+
+commit 195ac86ca993993422aac86b6f1994e5f881b1d6
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 3 19:22:00 2024 -0600
+
+    Updated design.
+
+commit 0d3cae6dbe7c0c5d9abfe7f7e477372a7c59b069
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 3 19:04:53 2024 -0600
+
+    Upload New File
+
+commit 9d593acd10b7bbbebc087b18714a2e5694cdb555
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 3 19:04:13 2024 -0600
+
+    Adding given file
+
+commit 2eae6b3391e9ba2c8856e5afe3ebefcc41af8b6d
+Author: Dalton Beauchesne (nqr159) <nqr159@mail.usask.ca>
+Date:   Thu Oct 3 17:50:48 2024 -0600
+
+    inital commit -m
+
+commit c83b71b9826039aa5ca462acb1196f7a0c556aef
+Author: Dwight Makaroff (dwm138) <makaroff@cs.usask.ca>
+Date:   Sun Sep 8 22:05:34 2024 -0600
+
+    Initial commit

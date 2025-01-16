@@ -1,0 +1,706 @@
+Dalton Beauchesne,nqr159,13353160
+John Thoms,gvr812,11357558
+
+test 1:
+nqr159@s360-drone13:~/Fall-cmpt332> gdb --args ./s-chat-x86 30002 tux6 30003
+GNU gdb (Fedora Linux) 15.2-1.fc40
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./s-chat-x86...
+(gdb) break s-chat.c:592
+Breakpoint 1 at 0x402f5b: file s-chat.c, line 592.
+(gdb) break s-chat.c:666
+Breakpoint 2 at 0x4030eb: file s-chat.c, line 666.
+(gdb) break s-chat.c:168
+Breakpoint 3 at 0x402668: file s-chat.c, line 168.
+(gdb) r
+Starting program: /student/nqr159/Fall-cmpt332/s-chat-x86 30002 tux6 30003
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.fedoraproject.org/>
+Enable debuginfod for this session? (y or [n]) n
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+warning: Corrupted shared library list: 0x71b9b0 != 0x71a7c0
+warning: Corrupted shared library list: 0x71ce40 != 0x71b9b0
+server: got connection from 2.0.117.50
+server: also got connection from 2.0.117.51
+Server got message from the printer
+hello
+Keyboard thread got input of hello
+
+
+Breakpoint 1, keyboard_input () at s-chat.c:592
+592	    gettimeofday(&tv,NULL);
+Missing debuginfo, try: dnf debuginfo-install libtirpc-1.3.6-0.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install glibc-2.39-22.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install krb5-libs-1.21.3-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libcom_err-1.47.0-5.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install keyutils-libs-1.6.3-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install openssl-libs-3.2.2-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libselinux-3.7-5.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install zlib-ng-compat-2.1.7-2.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install pcre2-10.44-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install systemd-libs-255.13-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libcap-2.69-8.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libgcc-14.2.1-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install nss-mdns-0.15.1-11.fc40.x86_64
+(gdb) n
+593	    m->seconds = (uint32_t) tv.tv_sec;
+(gdb) n
+594	    m->microseconds = (uint32_t) tv.tv_usec;
+(gdb) n
+596	    if (strcmp(m->string, exitCode) == 0) {
+(gdb) n
+601	      m ->id = KEYBOARD;
+(gdb) n
+604	    rv = RttSend(serverId,ptr,size,aMsg,msgSize);
+(gdb) print *m
+$1 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730061133, 
+  microseconds = 573782, id = 4}
+(gdb) n
+Server got message from the keyboard
+
+Breakpoint 3, server () at s-chat.c:168
+168	      RttP(sendSem);
+(gdb) n
+169	      maxMessages--;
+(gdb) n
+170	      ListAppend(transmitterMessages,fromMessage);
+(gdb) n
+171	      RttV(sendSem);
+(gdb) n
+177	      temp = getNewMessage();
+(gdb) n
+178	      memcpy(temp,fromMessage,size);
+(gdb) n
+179	      RttP(printerSem);
+(gdb) n
+180	      ListAppend(printerBox,temp);
+(gdb) n
+181	      RttV(printerSem);
+(gdb) n
+186	      maxMessages--;
+(gdb) n
+187	      if (maxMessages) {
+(gdb) print 
+$2 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730061133, 
+  microseconds = 573782, id = 4}
+(gdb) print *fromMessage
+$3 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730061133, 
+  microseconds = 573782, id = 4}
+(gdb) print *temp
+$4 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730061133, 
+  microseconds = 573782, id = 4}
+(gdb) n
+188	      rv =RttReply(keypid,(void *)throwAwayMsg,size);
+(gdb) n
+189	        if (rv == RTTNOSUCHTHREAD) {
+(gdb) n
+194	        if (rv == RTTFAILED) {
+(gdb) n
+307	    if (keyboardSleeping && maxMessages) {
+(gdb) n
+328	    if (printerSleeping && ListCount(printerBox)) {
+(gdb) n
+331		    printf("Server is waking up the printer\n");
+(gdb) n
+Server is waking up the printer
+336		    printerSleeping  = 0;
+(gdb) n
+337	      rv =RttReply(printpid,(void *)throwAwayMsg,size);
+(gdb) n
+
+Breakpoint 2, printer () at s-chat.c:666
+666	      msgPtr = (struct message*) ListRemove(printerBox);
+(gdb) n
+669	    printf("%s - %u %u\n", msgPtr->string, msgPtr->seconds,
+(gdb) print *msgPtr
+$5 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730061133, 
+  microseconds = 573782, id = 4}
+(gdb) n
+hello
+ - 1730061133 573782
+672	    free(msgPtr);
+(gdb) n
+673	    free(msg);
+(gdb) n
+674	    msgPtr = NULL;
+(gdb) n
+675	    msg = NULL;
+(gdb) n
+645	  msg = getNewMessage();
+(gdb) n
+646	   msg -> id = PRINTER; 
+(gdb) n
+647	   ptr = (void *) msg;
+(gdb) n
+649	    rv = RttSend(serverId,ptr,size,aMsg,msgSize);
+(gdb) n
+Server is Waking up transmitter
+Sender is sending message hello
+
+Server got message from the printer
+EXIT
+Keyboard thread got input of EXIT
+
+
+Breakpoint 1, keyboard_input () at s-chat.c:592
+592	    gettimeofday(&tv,NULL);
+(gdb) c
+Continuing.
+Server has received exit message
+[Inferior 1 (process 12939) exited normally]
+
+test 2:
+
+nqr159@s360-drone13:~/Fall-cmpt332> gdb --args ./s-chat-x86 30002 tux6 30003
+GNU gdb (Fedora Linux) 15.2-1.fc40
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./s-chat-x86...
+(gdb) break s-chat.c:592
+Breakpoint 1 at 0x402f5b: file s-chat.c, line 592.
+(gdb) break s-chat.c:168
+Breakpoint 2 at 0x402668: file s-chat.c, line 168.
+(gdb) break s-chat.c:456
+Breakpoint 3 at 0x402c79: file s-chat.c, line 456.
+(gdb) r
+Starting program: /student/nqr159/Fall-cmpt332/s-chat-x86 30002 tux6 30003
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.fedoraproject.org/>
+Enable debuginfod for this session? (y or [n]) n
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+warning: Corrupted shared library list: 0x71b9b0 != 0x71a7c0
+warning: Corrupted shared library list: 0x71ce40 != 0x71b9b0
+server: got connection from 2.0.117.50
+server: also got connection from 2.0.117.51
+Server got message from the printer
+hello
+Keyboard thread got input of hello
+
+
+Breakpoint 1, keyboard_input () at s-chat.c:592
+592	    gettimeofday(&tv,NULL);
+Missing debuginfo, try: dnf debuginfo-install libtirpc-1.3.6-0.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install glibc-2.39-22.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install krb5-libs-1.21.3-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libcom_err-1.47.0-5.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install keyutils-libs-1.6.3-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install openssl-libs-3.2.2-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libselinux-3.7-5.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install zlib-ng-compat-2.1.7-2.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install pcre2-10.44-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install systemd-libs-255.13-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libcap-2.69-8.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libgcc-14.2.1-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install nss-mdns-0.15.1-11.fc40.x86_64
+(gdb) n
+593	    m->seconds = (uint32_t) tv.tv_sec;
+(gdb) n
+594	    m->microseconds = (uint32_t) tv.tv_usec;
+(gdb) n
+596	    if (strcmp(m->string, exitCode) == 0) {
+(gdb) n
+601	      m ->id = KEYBOARD;
+(gdb) n
+604	    rv = RttSend(serverId,ptr,size,aMsg,msgSize);
+(gdb) print *m
+$1 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730061548, 
+  microseconds = 556155, id = 4}
+(gdb) n
+Server got message from the keyboard
+
+Breakpoint 2, server () at s-chat.c:168
+168	      RttP(sendSem);
+(gdb) print *fromMessage
+$2 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730061548, 
+  microseconds = 556155, id = 4}
+(gdb) n
+169	      maxMessages--;
+(gdb) n
+170	      ListAppend(transmitterMessages,fromMessage);
+(gdb) n
+171	      RttV(sendSem);
+(gdb) n
+177	      temp = getNewMessage();
+(gdb) c
+Continuing.
+Server is waking up the printer
+hello
+ - 1730061548 556155
+Server is Waking up transmitter
+
+Breakpoint 3, transmitter () at s-chat.c:456
+456	  RttP(sendSem);
+(gdb) print *m
+Cannot access memory at address 0x0
+(gdb) n
+457	  m = (struct message * ) ListFirst(transmitterMessages);
+(gdb) n
+458	        ListRemove(transmitterMessages);
+(gdb) print *m
+$3 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730061548, 
+  microseconds = 556155, id = 4}
+(gdb) n
+460		printf("Sender is sending message %s\n",m ->string);
+(gdb) n
+Sender is sending message hello
+
+462		maxMessages++;
+(gdb) n
+463	        RttV(sendSem);
+(gdb) n
+464	        encode(m);
+(gdb) n
+468	      total = 0; 
+(gdb) n
+469	         while (total < sizeof(struct message))  {
+(gdb) n
+473	                   theirs ->ai_addrlen);
+(gdb) n
+470	          rv = sendto(sendSockFd,(void *) m,
+(gdb) n
+472	                    theirs -> ai_addr,
+(gdb) n
+470	          rv = sendto(sendSockFd,(void *) m,
+(gdb) n
+475	         total+=rv; 
+(gdb) n
+477	  if (rv <1 ) {
+(gdb) n
+469	         while (total < sizeof(struct message))  {
+(gdb) n
+485	         free(m);
+(gdb) n
+486	         m = NULL;
+(gdb) n
+432	          msg = getNewMessage();
+(gdb) n
+433	    msg -> id = SENDER; 
+(gdb) n
+434	    ptr = (void *) msg;
+(gdb) n
+435	    rv = RttSend(serverId,ptr,size,aMsg,msgSize);
+(gdb) n
+Server got message from the printer
+EXIT
+Keyboard thread got input of EXIT
+
+
+Breakpoint 1, keyboard_input () at s-chat.c:592
+592	    gettimeofday(&tv,NULL);
+(gdb) c
+Continuing.
+Server has received exit message
+[Inferior 1 (process 13676) exited normally]
+test 3:
+nqr159@s360-drone13:~/Fall-cmpt332> gdb --args ./s-chat-x86 30009 cmpt332-ppc 30010
+GNU gdb (Fedora Linux) 15.2-1.fc40
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./s-chat-x86...
+(gdb) break s-chat.c:524
+Breakpoint 1 at 0x402df0: file s-chat.c, line 524.
+(gdb) break s-chat.c:262
+Breakpoint 2 at 0x4028a9: file s-chat.c, line 262.
+(gdb) break s-chat.c:666
+Breakpoint 3 at 0x4030eb: file s-chat.c, line 666.
+(gdb) 
+Note: breakpoint 3 also set at pc 0x4030eb.
+Breakpoint 4 at 0x4030eb: file s-chat.c, line 666.
+(gdb) r
+Starting program: /student/nqr159/Fall-cmpt332/s-chat-x86 30009 cmpt332-ppc 30010
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.fedoraproject.org/>
+Enable debuginfod for this session? (y or [n]) n
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+warning: Corrupted shared library list: 0x71b9b0 != 0x71a7c0
+warning: Corrupted shared library list: 0x71ce40 != 0x71b9b0
+server: got connection from 2.0.117.57
+server: also got connection from 2.0.117.58
+Server got message from the printer
+The message was hello
+
+
+Breakpoint 1, receiver () at s-chat.c:524
+524	    m -> id = RECEIVER;
+Missing debuginfo, try: dnf debuginfo-install libtirpc-1.3.6-0.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install glibc-2.39-22.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install krb5-libs-1.21.3-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libcom_err-1.47.0-5.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install keyutils-libs-1.6.3-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install openssl-libs-3.2.2-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libselinux-3.7-5.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install zlib-ng-compat-2.1.7-2.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install pcre2-10.44-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install systemd-libs-255.13-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libcap-2.69-8.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libgcc-14.2.1-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install nss-mdns-0.15.1-11.fc40.x86_64
+(gdb) print *m
+$1 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730062848, 
+  microseconds = 871921, id = 4}
+(gdb) n
+525	  ptr = (void * )m;
+(gdb) n
+526	  ptr2 = (void *) throwAwayMsg;
+(gdb) n
+527	        rv = RttSend(serverId,ptr,size2,ptr2,msgSize);
+(gdb) n
+Server got message from the Receiver
+
+Breakpoint 2, server () at s-chat.c:262
+262	      RttP(printerSem);
+(gdb) n
+263	      ListAppend(printerBox,fromMessage);
+(gdb) print *fromMEssage
+No symbol "fromMEssage" in current context.
+(gdb) print *fromMessage
+$2 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730062848, 
+  microseconds = 871921, id = 2}
+(gdb) n
+264	      RttV(printerSem);
+(gdb) n
+266	      rv =RttReply(recpid,(void *)throwAwayMsg,size);
+(gdb) n
+267	      if (rv == RTTNOSUCHTHREAD) {
+(gdb) n
+272	      if (rv == RTTFAILED) {
+(gdb) n
+307	    if (keyboardSleeping && maxMessages) {
+(gdb) n
+328	    if (printerSleeping && ListCount(printerBox)) {
+(gdb) n
+331		    printf("Server is waking up the printer\n");
+(gdb) n
+Server is waking up the printer
+336		    printerSleeping  = 0;
+(gdb) n
+337	      rv =RttReply(printpid,(void *)throwAwayMsg,size);
+(gdb) n
+
+Breakpoint 3, printer () at s-chat.c:666
+666	      msgPtr = (struct message*) ListRemove(printerBox);
+(gdb) n
+669	    printf("%s - %u %u\n", msgPtr->string, msgPtr->seconds,
+(gdb) print *msgPtr
+$3 = {string = "hello\n", '\000' <repeats 2041 times>, seconds = 1730062848, 
+  microseconds = 871921, id = 2}
+(gdb) n
+hello
+ - 1730062848 871921
+672	    free(msgPtr);
+(gdb) n
+673	    free(msg);
+(gdb) n
+674	    msgPtr = NULL;
+(gdb) n
+675	    msg = NULL;
+(gdb) n
+645	  msg = getNewMessage();
+(gdb) n
+646	   msg -> id = PRINTER; 
+(gdb) n
+647	   ptr = (void *) msg;
+(gdb) c
+Continuing.
+Server got message from the Receiver
+
+Breakpoint 2, server () at s-chat.c:262
+262	      RttP(printerSem);
+(gdb) c
+Continuing.
+Server got message from the printer
+
+Breakpoint 3, printer () at s-chat.c:666
+666	      msgPtr = (struct message*) ListRemove(printerBox);
+(gdb) exit
+test 4:
+nqr159@s360-drone13:~/Fall-cmpt332> gdb --args ./s-chat-x86 30009 cmpt332-ppc 30010
+GNU gdb (Fedora Linux) 15.2-1.fc40
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./s-chat-x86...
+(gdb) break s-chat.c:596
+Breakpoint 1 at 0x402f8c: file s-chat.c, line 596.
+(gdb) break s-chat.c:289
+Breakpoint 2 at 0x40294a: file s-chat.c, line 289.
+(gdb) break s-chat.c:86
+Breakpoint 3 at 0x4024fa: file s-chat.c, line 86.
+(gdb) r
+Starting program: /student/nqr159/Fall-cmpt332/s-chat-x86 30009 cmpt332-ppc 30010
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.fedoraproject.org/>
+Enable debuginfod for this session? (y or [n]) n
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+warning: Corrupted shared library list: 0x71b9b0 != 0x71a7c0
+warning: Corrupted shared library list: 0x71ce40 != 0x71b9b0
+server: got connection from 2.0.117.57
+server: also got connection from 2.0.117.58
+Server got message from the printer
+EXIT
+Keyboard thread got input of EXIT
+
+
+Breakpoint 1, keyboard_input () at s-chat.c:596
+596	    if (strcmp(m->string, exitCode) == 0) {
+Missing debuginfo, try: dnf debuginfo-install libtirpc-1.3.6-0.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install glibc-2.39-22.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install krb5-libs-1.21.3-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libcom_err-1.47.0-5.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install keyutils-libs-1.6.3-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install openssl-libs-3.2.2-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libselinux-3.7-5.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install zlib-ng-compat-2.1.7-2.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install pcre2-10.44-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install systemd-libs-255.13-1.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libcap-2.69-8.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install libgcc-14.2.1-3.fc40.x86_64
+Missing debuginfo, try: dnf debuginfo-install nss-mdns-0.15.1-11.fc40.x86_64
+(gdb) n
+597	      m->id=EXIT;
+(gdb) n
+604	    rv = RttSend(serverId,ptr,size,aMsg,msgSize);
+(gdb) n
+Server has received exit message
+
+Breakpoint 2, server () at s-chat.c:289
+289	      free(fromMessage);
+(gdb) n
+290	      fromMessage = NULL;
+(gdb) n
+291	      exit_program();
+(gdb) s
+
+Breakpoint 3, exit_program () at s-chat.c:86
+86	  ListFree(emptyMessages, free);
+(gdb) n
+87	  ListFree(transmitterMessages, free);
+(gdb) n
+88	  ListFree(printerBox, free);
+(gdb) n
+89	  fcntl(0,F_SETFL,stdinflags);
+(gdb) n
+90	  close(recvSockFd);
+(gdb) n
+91	  close(sendSockFd);
+(gdb) n
+92	  exit(0);
+(gdb) n
+[Inferior 1 (process 17066) exited normally]
+exit:
+Test 5:
+
+Machine 1:
+nqr159@s360-drone13:~/Fall-cmpt332> ./s-chat-x86 30010 drone13 30009
+Hello world
+ - 1730065939 585943
+My name is bob 
+My name is bob 
+ - 1730065953 780228
+nice to meet you bob I am jerry
+ - 1730065966 255977
+I am doing tests for my s-chat program
+ - 1730065977 375988
+that great jerrry
+that great jerrry
+ - 1730065986 330254
+EXIT
+nqr159@s360-drone13:~/Fall-cmpt332> 
+
+Machine 2:
+Hello world
+Hello world
+ - 1730065939 585943
+My name is bob 
+ - 1730065953 780228
+nice to meet you bob I am jerry
+nice to meet you bob I am jerry
+ - 1730065966 255977
+I am doing tests for my s-chat program
+I am doing tests for my s-chat program
+ - 1730065977 375988
+that great jerrry
+ - 1730065986 330254
+EXIT
+nqr159@s360-drone13:~/Fall-cmpt332> 
+
+Test 6:
+Machine 1:
+nqr159@s360-drone13:~/Fall-cmpt332> ./s-chat-x86 30009 cmpt332-ppc 30010
+HELLO
+ - 1730066292 47106
+Hi there
+Hi there
+ - 1730066296 277148
+Like my s-chat program
+Like my s-chat program
+ - 1730066304 967166
+Of course
+ - 1730066310 897253
+who wouldnt
+ - 1730066313 537179
+I bet whoever is marking this will give a good mark
+ - 1730066325 67099
+Hopefully I sacrificed my first born child to get this done
+Hopefully I sacrificed my first born child to get this done
+ - 1730066342 597076
+EXIT
+
+Machine 2:
+
+nqr159@cmpt332-ppc:~/Fall-cmpt332> ./s-chat-ppc 30010 drone13 30009
+HELLO
+HELLO
+ - 1730066292 47106
+Hi there
+ - 1730066296 277148
+Like my s-chat program
+ - 1730066304 967166
+Of course
+Of course
+ - 1730066310 897253
+who wouldnt
+who wouldnt
+ - 1730066313 537179
+I bet whoever is marking this will give a good mark
+I bet whoever is marking this will give a good mark
+ - 1730066325 67099
+Hopefully I sacrificed my first born child to get this done
+ - 1730066342 597076
+EXIT
+
+Test 7:
+Machine 1:
+nqr159@cmpt332-ppc:~/Fall-cmpt332> ./s-chat-ppc 30010 cmpt332-amd64 30009
+HELLO
+ - 1730066661 580751
+Hi there
+Hi there
+ - 1730066666 551884
+WOW this actually works
+ - 1730066679 400719
+s-chat is the best program ever
+ - 1730066685 610719
+ikr whoever made this must be super awesome
+ikr whoever made this must be super awesome
+ - 1730066698 911802
+probably not 
+ - 1730066708 60733
+wdym
+wdym
+ - 1730066720 921786
+EXIT
+Machine 2:
+nqr159@cmpt332-amd64:~/Fall-cmpt332> ./s-chat-x86 30009 cmpt332-ppc 30010
+HELLO
+HELLO
+ - 1730066661 580751
+Hi there
+ - 1730066666 551884
+WOW this actually works
+WOW this actually works
+ - 1730066679 400719
+s-chat is the best program ever
+s-chat is the best program ever
+ - 1730066685 610719
+ikr whoever made this must be super awesome
+ - 1730066698 911802
+probably not 
+probably not 
+ - 1730066708 60733
+wdym
+ - 1730066720 921786
+EXIT
+
+Test 8:
+nqr159@cmpt332-amd64:~/Fall-cmpt332> ./s-chat-x86 30009 cmpt332-ppc 30010
+Machine 1:
+888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+ - 1730067584 990168
+
+88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888ga - 1730067586 430177
+8
+ - 1730067586 430186
+hello
+hello
+ - 1730067620 970166
+EXIT
+
+Machine 2:
+
+nqr159@cmpt332-ppc:~/Fall-cmpt332> ./s-chat-ppc 30010 cmpt332-amd64 30009
+
+ - 1730067584 990168
+88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888g - 1730067586 430177
+8
+ - 1730067586 430186
+hello
+ - 1730067620 970166
+EXIT
+
+
+
